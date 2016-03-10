@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns3="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.w3.org/2001/XMLSchema" xmlns:ns2="setProducts" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Header/>
+   <ns0:Body>
+      <ns2:setProducts>
+         <setProducts xsi:type="ns2:requestType">
+            <authenticate xsi:type="ns2:authenticateType">
+               <system_key xsi:type="ns1:string">e9b5220ef4fef21414b584eca2570114d9c9fe0a5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</system_key>
+               <system_login xsi:type="ns1:string">login</system_login>
+            </authenticate>
+            <params xsi:type="ns2:paramsType">
+               <settings xsi:type="ns2:settingsType">
+                  <modification_type xsi:type="ns1:string">edit</modification_type>
+               </settings>
+               <products xsi:type="ns2:productsType" ns3:arrayType="ns2:productType[2]">
+                  <item xsi:type="ns2:productType">
+                     <id xsi:type="ns1:int">1175014091</id>
+                     <retail_price xsi:type="ns1:float">22.5</retail_price>
+                     <sizes xsi:type="ns2:sizesType">
+                        <size_id xsi:type="ns1:string">uniw</size_id>
+                        <quantity>
+                           <stocks>
+                              <stock_id xsi:type="ns1:int">1</stock_id>
+                              <quantity xsi:type="ns1:int">10</quantity>
+                           </stocks>
+                           <stocks>
+                              <stock_id xsi:type="ns1:int">2</stock_id>
+                              <quantity_add xsi:type="ns1:int">5</quantity_add>
+                           </stocks>
+                        </quantity>
+                     </sizes>
+                  </item>
+                  <item xsi:type="ns2:productType">
+                     <product_sizecode xsi:type="ns1:string">ABCD</product_sizecode>
+                     <note xsi:type="ns1:string">produkt edytowany przez api w Pythonie :)</note>
+                     <product_sizecode_data xsi:type="ns2:product_sizecodeType">
+                        <retail_price xsi:type="ns1:float">86.99</retail_price>
+                        <wholesale_price xsi:type="ns1:float">70</wholesale_price>
+                        <quantity xsi:type="ns2:quantityType">
+                           <stocks xsi:type="ns2:stocksType" ns3:arrayType="ns2:stockType[2]">
+                              <item xsi:type="ns2:stockType">
+                                 <stock_id xsi:type="ns1:int">1</stock_id>
+                                 <quantity xsi:type="ns1:decimal">25</quantity>
+                              </item>
+                              <item xsi:type="ns2:stockType">
+                                 <stock_id xsi:type="ns1:int">2</stock_id>
+                                 <quantity_add xsi:type="ns1:decimal">5</quantity_add>
+                              </item>
+                           </stocks>
+                        </quantity>
+                     </product_sizecode_data>
+                     <name xsi:type="ns2:ndlType">
+                        <languages xsi:type="ns2:languagesTypeArray">
+                           <language_id xsi:type="ns1:string">pol</language_id>
+                           <value xsi:type="ns1:string">nazwa produktu</value>
+                        </languages>
+                     </name>
+                     <description xsi:type="ns2:ndlType">
+                        <languages xsi:type="ns2:languagesTypeArray">
+                           <language_id xsi:type="ns1:string">pol</language_id>
+                           <value xsi:type="ns1:string">przykladowy opis</value>
+                        </languages>
+                     </description>
+                     <long_description xsi:type="ns2:ndlType">
+                        <languages xsi:type="ns2:languagesTypeArray">
+                           <language_id xsi:type="ns1:string">pol</language_id>
+                           <value xsi:type="ns1:string">przykladowy opis</value>
+                        </languages>
+                     </long_description>
+                  </item>
+               </products>
+            </params>
+         </setProducts>
+      </ns2:setProducts>
+   </ns0:Body>
+</SOAP-ENV:Envelope>
