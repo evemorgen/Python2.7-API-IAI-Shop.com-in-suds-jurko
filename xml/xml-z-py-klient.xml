@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:ns3="setProducts"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:ns0="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ns2="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Header/>
+    <ns1:Body>
+        <ns3:setProducts>
+            <setProducts xsi:type="ns3:requestType">
+                <authenticate xsi:type="ns3:authenticateType">
+                    <system_key xsi:type="ns2:string">dad6017229881610c4d8e1c0954f3d58d5fda92d</system_key>
+                    <system_login xsi:type="ns2:string">API_login</system_login>
+                </authenticate>
+                <params xsi:type="ns3:paramsType">
+                    <settings xsi:type="ns3:settingsType">
+                        <modification_type xsi:type="ns2:string">edit</modification_type>
+                    </settings>
+                    <products xsi:type="ns3:productsType">
+                        <retail_price xsi:type="ns2:int">22</retail_price>
+                        <id xsi:type="ns2:int">86938</id>
+                        <sizes>
+                            <size_id xsi:type="ns2:string">uniw</size_id>
+                            <quantity>
+                                <stocks>
+                                    <stock_id xsi:type="ns2:int">1</stock_id>
+                                    <quantity xsi:type="ns2:int">10</quantity>
+                                </stocks>
+                            </quantity>
+                        </sizes>
+                    </products>
+                </params>
+            </setProducts>
+        </ns3:setProducts>
+    </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope
+    xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:ns1="setProducts"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+    <SOAP-ENV:Body>
+        <ns1:setProductsResponse>
+            <response xsi:type="ns1:responseType">
+                <authenticate xsi:type="ns1:authenticateType">
+                    <system_key xsi:type="xsd:string">dad6017229881610c4d8e1c0954f3d58d5fda92d_iai</system_key>
+                </authenticate>
+                <errors xsi:type="ns1:errorsType">
+                    <faultCode xsi:type="xsd:int">0</faultCode>
+                    <faultString xsi:type="xsd:string"></faultString>
+                </errors>
+                <result xsi:type="ns1:resultType">
+                    <products SOAP-ENC:arrayType="ns1:productResultType[1]" xsi:type="ns1:productsResultType">
+                        <item xsi:type="ns1:productResultType">
+                            <faultCode xsi:type="xsd:int">5</faultCode>
+                            <faultString xsi:type="xsd:string">Dodawanie produktów zostało zablokowane w ustawieniach wywołania</faultString>
+                            <details SOAP-ENC:arrayType="ns1:detailResultType[1]" xsi:type="ns1:detailsResultType">
+                                <item xsi:type="ns1:detailResultType">
+                                    <stock_id xsi:type="xsd:int">0</stock_id>
+                                    <quantity xsi:type="xsd:int">0</quantity>
+                                    <operation_type xsi:type="xsd:string"></operation_type>
+                                    <faultCode xsi:type="xsd:string">5</faultCode>
+                                    <faultString xsi:type="xsd:string">Dodawanie produktów zostało zablokowane w ustawieniach wywołania</faultString>
+                                </item>
+                            </details>
+                        </item>
+                    </products>
+                </result>
+            </response>
+        </ns1:setProductsResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+

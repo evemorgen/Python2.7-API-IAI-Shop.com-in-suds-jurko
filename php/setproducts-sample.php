@@ -60,62 +60,6 @@ $request = array(
                             )
                         )
                     )
-                ),
-                // edycja danych produktu identyfikowanego tylko po kodzie
-                // zewnetrznego systemu - przydatna w przypadku gdy nieznaze
-                // jest id produktu oraz id rozmiaru
-                array (
-                    'product_sizecode' => 'ABCD', // kod zewnetrznego systemu
-                    'note' => 'produkt edytowany przez API', // adnotacja
-                    // nazwa produktu
-                    'name' => array (
-                        // tablica jezykow, w ktorych podana jest nazwa
-                        'languages' => array (
-                            array (
-                                'language_id' => 'pol', // identyfikator jezyka
-                                'value' => 'nazwa produktu' // nazwa
-                            )
-                        )
-                    ),
-                    // opis krotki produktu
-                    'description' => array (
-                        // tablica jezykow, w ktorych podany jest opis krotki
-                        'languages' => array (
-                            array (
-                                'language_id' => 'pol', // identyfikator jezyka
-                                'value' => 'przykladowy opis' // opis krotki
-                            )
-                        )
-                    ),
-                    // opis dlugi produktu
-                    'long_description' => array (
-                        // tablica jezykow, w ktorych podany jest opis krotki
-                        'languages' => array (
-                            array (
-                                'language_id' => 'pol', // identyfikator jezyka
-                                'value' => 'przykladowy opis' // opis dlugi
-                            )
-                        )
-                    ),
-                    // tablica elementow zaleznych od kodu zewnetrznego systemu
-                    'product_sizecode_data' => array (
-                        'retail_price' => 86.99, // cena detaliczna brutto
-                        'wholesale_price' => 70, // cena hurtowa brutto
-                        // tablica stanow magazynowych (ilosci produktu)
-                        'quantity' => array (
-                            // tablica magazynow
-                            'stocks' => array (
-                                array (
-                                    'stock_id' => 1, // id magazynu
-                                    'quantity' => 25 // nowy stan magazynowy (ilosc)
-                                ),
-                                array (
-                                    'stock_id' => 2, // id magazynu
-                                    'quantity_add' => 5 // dodanie do aktualnej ilości 5 sztuk (powiększenie stanu magazynowego)
-                                )
-                            )
-                        )
-                    )
                 )
             )
         )
